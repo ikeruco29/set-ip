@@ -1,8 +1,9 @@
 # Set Ip
+
 Powershell script to set and reset an static IP for any interface
 
 # How to use it
----
+
 First of all, identify the index of the network interface you want to set. This can be done executing this command:
 ```powershell
 Get-NetIPAddress | Format-Table InterfaceIndex,InterfaceAlias
@@ -26,3 +27,21 @@ and to reset it:
 ```powershell
 .\setip.ps1 reset 192.168.1.23 4
 ```
+
+# Parameters
+### -all
+Used with `reset` value in 'mode'. Resets the IP of ethernet and wifi interfaces.
+```bash
+.\setip.ps1 reset -all
+```
+
+### -mode
+Set the mode of the command. It can be `set` or `reset`.
+
+### -ipaddr
+Select the ip address the command will work with.
+`.\setip.ps1 set -ipaddr 192.168.1.12` → set the ip address 192.168.1.12 to the default interface.
+
+### -interfaceIdx
+Set the interface index it will work with.
+
