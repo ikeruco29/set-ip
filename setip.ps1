@@ -23,6 +23,7 @@ param (
 
 function Show-Help {
     Write-Host ""
+    Write-Host ""
     Write-Host "Usage:"
     Write-Host "  setip.ps1 [options]"
     Write-Host ""
@@ -32,6 +33,8 @@ function Show-Help {
     Write-Host "    -ipaddr <string>      IP address to set or reset, depending on the selected mode"  
     Write-Host "    -all                  Can be used with mode 'reset' to reset all manual modified interfaces"
     Write-Host "    -interfaceIdx <int>   Affected interface index"
+    Write-Host "    -showNetInterfaces    Shows all the net interfaces presented in your computer"
+    Write-Host ""
     Write-Host ""
 }
 
